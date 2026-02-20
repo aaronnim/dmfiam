@@ -1,0 +1,104 @@
+.wrapper {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+}
+
+.inner {
+    max-width: 48rem;
+}
+
+.inner.centered {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Stagger animation for children */
+.inner>* {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heroFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.inner>*:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.inner>*:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.inner>*:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes heroFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--foreground);
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--muted-foreground);
+    line-height: 1.6;
+}
+
+.badges {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.3125rem 0.75rem;
+    background-color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--muted-foreground);
+}
+
+@media (min-width: 640px) {
+    .wrapper {
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+    }
+
+    .title {
+        font-size: 2.25rem;
+    }
+
+    .subtitle {
+        font-size: 1.125rem;
+    }
+
+    .badge {
+        font-size: 0.8125rem;
+        padding: 0.375rem 0.875rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+    }
+}

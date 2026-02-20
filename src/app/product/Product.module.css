@@ -1,0 +1,194 @@
+/* Product Page Styles */
+
+.capabilitiesGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.capabilityItem {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.capabilityIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.75rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.capabilityItem:hover .capabilityIcon {
+    transform: scale(1.1);
+}
+
+.capabilityIcon.blue {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));
+    color: #3B82F6;
+}
+
+.capabilityIcon.indigo {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(99, 102, 241, 0.05));
+    color: #6366F1;
+}
+
+.capabilityIcon.emerald {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05));
+    color: #10B981;
+}
+
+.capabilityIcon.amber {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.05));
+    color: #F59E0B;
+}
+
+.capabilityTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--foreground);
+}
+
+.capabilityDesc {
+    color: var(--muted-foreground);
+    line-height: 1.6;
+}
+
+/* Architecture Card */
+.archCard {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.archTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--foreground);
+}
+
+.archFlow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.archBox {
+    padding: 1rem 1.5rem;
+    background: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: background-color 0.2s ease;
+}
+
+.archBox:hover {
+    background-color: var(--border);
+}
+
+.archCenter {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    color: white;
+    border-radius: 0.75rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.archCenter::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(224, 242, 254, 0.06) 0%, transparent 60%);
+    animation: archShimmer 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes archShimmer {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20%, 20%);
+    }
+}
+
+.archCenterName {
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+}
+
+.archCenterSub {
+    font-size: 0.8125rem;
+    opacity: 0.85;
+}
+
+.archArrow {
+    text-align: center;
+    color: var(--muted-foreground);
+    font-size: 0.8125rem;
+}
+
+.archTargets {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.archTargets .archBox {
+    flex: 1;
+}
+
+/* Content Grid */
+.contentGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+/* CTA */
+.ctaWrapper {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.ctaTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.ctaSub {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+    margin-bottom: 2rem;
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .contentGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

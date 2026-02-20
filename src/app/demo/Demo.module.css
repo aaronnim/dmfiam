@@ -1,0 +1,314 @@
+/* Demo Page Styles */
+
+/* Video Hero */
+.videoHero {
+    max-width: 56rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.videoFrame {
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.videoFrame:hover {
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+}
+
+.videoFrame::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(224, 242, 254, 0.06) 0%, transparent 60%);
+    animation: shimmer 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20%, 20%);
+    }
+}
+
+.playCircle {
+    width: 5rem;
+    height: 5rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.videoFrame:hover .playCircle {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.videoFrameLabel {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.videoCaption {
+    font-size: 0.9375rem;
+    color: var(--muted-foreground);
+}
+
+/* Highlights Grid */
+.highlightsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.highlightCard {
+    padding: 2rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.highlightCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--card-accent, var(--accent)), var(--card-accent-end, #F97316));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.highlightCard:hover::before {
+    transform: scaleX(1);
+}
+
+.highlightCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent);
+}
+
+.cardIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.25rem;
+    color: white;
+}
+
+.cardIcon.blue {
+    background: linear-gradient(135deg, #3B82F6, #2563EB);
+}
+
+.cardIcon.indigo {
+    background: linear-gradient(135deg, #6366F1, #4F46E5);
+}
+
+.cardIcon.emerald {
+    background: linear-gradient(135deg, #10B981, #059669);
+}
+
+.cardIcon.amber {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+}
+
+.cardIcon.rose {
+    background: linear-gradient(135deg, #F43F5E, #E11D48);
+}
+
+.cardIcon.cyan {
+    background: linear-gradient(135deg, #06B6D4, #0891B2);
+}
+
+.cardTitle {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--foreground);
+}
+
+.cardDesc {
+    font-size: 0.9375rem;
+    color: var(--muted-foreground);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.cardBullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cardBulletItem {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.8125rem;
+    color: var(--foreground);
+}
+
+.bulletIcon {
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+/* Timeline */
+.timeline {
+    max-width: 48rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 1.25rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+}
+
+.timelineItem {
+    display: flex;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.timelineItem:last-child {
+    padding-bottom: 0;
+}
+
+.timelineDot {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.timelineContent {
+    flex: 1;
+    padding-top: 0.25rem;
+}
+
+.timelineTitle {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: var(--foreground);
+}
+
+.timelineDesc {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    line-height: 1.6;
+}
+
+/* CTA */
+.ctaWrapper {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.ctaTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.ctaSub {
+    font-size: 1rem;
+    color: var(--muted-foreground);
+    margin-bottom: 1.5rem;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ctaButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive */
+@media (min-width: 480px) {
+    .ctaButtons {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 768px) {
+    .highlightsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ctaTitle {
+        font-size: 2rem;
+    }
+
+    .ctaSub {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .highlightsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

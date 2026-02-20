@@ -1,0 +1,229 @@
+/* CSS Reset & Variables */
+
+:root {
+  /* Colors */
+  --baby-blue: #E0F2FE;
+  --baby-blue-dark: #BAE6FD;
+  --navy: #0F172A;
+  --navy-light: #1E293B;
+  --red: #EF4444;
+  --red-hover: #DC2626;
+
+  /* Semantic Colors - Light Mode Defaults */
+  --background: #F5F8FA;
+  /* Very light blue/neutral tint */
+  --foreground: #0F172A;
+  /* Navy */
+
+  --primary: #0F172A;
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #E0F2FE;
+  --secondary-foreground: #0F172A;
+
+  --accent: #EF4444;
+  --accent-foreground: #FFFFFF;
+
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+
+  /* Layout */
+  --radius: 0.5rem;
+  --container-width: 1200px;
+  --header-height: 4.5rem;
+}
+
+[data-theme='dark'] {
+  /* Semantic Colors - Dark Mode */
+  --background: #0B1120;
+  /* Deep Navy, not black */
+  --foreground: #F8FAFC;
+
+  --primary: #E0F2FE;
+  /* Baby blue for primary actions in dark mode? Or keep Navy? Navy on Navy is bad. Maybe Red for CTAs. */
+  --primary-foreground: #0F172A;
+
+  --secondary: #1E293B;
+  --secondary-foreground: #F8FAFC;
+
+  /* Accent stays red */
+
+  --muted: #1E293B;
+  --muted-foreground: #94A3B8;
+
+  --card: #151F32;
+  /* Slightly lighter than background */
+  --card-foreground: #F8FAFC;
+
+  --border: #334155;
+  --input: #334155;
+}
+
+/* Global Reset & Base */
+html {
+  font-family: var(--font-poppins), sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Typography Defaults */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+.grainy-gradient {
+  position: relative;
+  background: radial-gradient(circle at 15% 50%, rgba(224, 242, 254, 0.4), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(239, 68, 68, 0.1), transparent 25%);
+  z-index: 0;
+}
+
+.grainy-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  /* Subtle grain */
+  z-index: -1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  pointer-events: none;
+}
+
+[data-theme='dark'] .grainy-gradient {
+  background: radial-gradient(circle at 15% 50%, rgba(30, 41, 59, 0.8), transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(239, 68, 68, 0.15), transparent 40%);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+/* =============================================
+   Scroll Reveal Animations
+   ============================================= */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal[data-visible='true'] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for children */
+.delay-1 {
+  transition-delay: 0.1s;
+}
+
+.delay-2 {
+  transition-delay: 0.2s;
+}
+
+.delay-3 {
+  transition-delay: 0.3s;
+}
+
+.delay-4 {
+  transition-delay: 0.4s;
+}
+
+.delay-5 {
+  transition-delay: 0.5s;
+}
+
+/* Scale-in variant */
+.scroll-reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal-scale[data-visible='true'] {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* =============================================
+   Accessibility: Focus Visible
+   ============================================= */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* =============================================
+   Accessibility: Reduced Motion
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .scroll-reveal,
+  .scroll-reveal-scale {
+    opacity: 1;
+    transform: none;
+  }
+}

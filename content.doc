@@ -1,0 +1,140 @@
+What dmfIAM actually is
+dmfIAM is an enterprise Identity Provider and Identity & Access Management platform.
+It:
+Is the system of record for identities
+Manages authentication, authorization, and lifecycle
+Integrates with AD and Microsoft Entra (not the other way around)
+Correct mental model
+dmfIAM = Identity Provider + Governance
+Entra / AD = Directories & federation targets
+Simple positioning sentence (use everywhere)
+dmfIAM is an enterprise Identity Provider that centralizes authentication, authorization, and identity lifecycle — built for Swiss regulated environments.
+HOMEPAGE — CORRECTED, ACTUAL COPY (EN)
+HERO SECTION
+Headline
+Enterprise Identity Provider for Swiss Organizations
+Subheadline
+dmfIAM centralizes authentication, authorization, and identity lifecycle — with built-in governance, auditability, and Entra integration.
+Primary CTA
+Request a demo
+Secondary CTA
+See how it works
+PROBLEM SECTION
+Title
+Identity Has Become Fragmented and Risky
+Body
+In many organizations, identity is spread across directories, applications, and manual processes.
+Authentication is split across systems
+Joiner–Mover–Leaver processes are manual
+Admin and service accounts are unmanaged
+Audit evidence is collected too late
+This fragmentation creates operational and regulatory risk.
+SOLUTION SECTION
+Title
+dmfIAM: One Identity Provider. Full Control.
+Body
+dmfIAM acts as the central Identity Provider for your organization.
+It manages:
+Who identities are
+How they authenticate
+What they are allowed to access
+How access changes over time
+All from a single, auditable platform.
+WHAT dmfIAM DELIVERS
+Identity Lifecycle Management
+Joiner–Mover–Leaver automation
+Identity status and lifecycle enforcement
+Central Authorization
+Role-based access control (RBAC)
+Policy-driven authorization
+Privileged Identity Control
+Admin and service account lifecycle
+Clear ownership and accountability
+Authentication & Federation
+Native authentication
+SSO and federation to AD and Microsoft Entra
+Integration & Extensibility
+APIs for external systems
+Integration with physical access and infrastructure
+Governance & Auditability
+Audit logs
+Access reviews
+Approval workflows
+Self-service portals
+WHO IT’S FOR
+Title
+Designed for Regulated and Critical Environments
+dmfIAM supports organizations that require:
+Central identity authority
+Traceable access decisions
+Operational resilience
+Including:
+Infrastructure & utilities
+Financial services
+Healthcare
+Manufacturing
+Public-sector and regulated entities
+DEPLOYMENT OPTIONS
+Title
+SaaS or On-Prem — Without Compromise
+SaaS
+Swiss-hosted
+Managed operations
+SLA-backed
+On-Prem
+Full sovereignty
+Internal control
+Suitable for critical infrastructure
+TRUST & CREDIBILITY
+Enterprise Identity Provider
+Open-source foundation
+Swiss compliance focus (nFADP / GDPR)
+Proven in real production environments
+FINAL CTA
+Title
+Take Back Control of Identity
+Request a demo
+Talk to an expert
+PRODUCT & COMPLIANCE — CORRECTED NARRATIVE
+PRODUCT PAGE — KEY SHIFT
+Title
+Central Identity Provider with Built-In Governance
+Core message
+dmfIAM is not an add-on or overlay.
+It is the identity authority that applications, directories, and services rely on.
+Architecture (described, not diagram-heavy)
+dmfIAM stores and governs identities
+Applications authenticate against dmfIAM
+AD and Entra integrate via federation or synchronization
+Authorization decisions are made centrally
+COMPLIANCE PAGE — KEY SHIFT
+Title
+Identity as a Regulated Control
+Core message
+When identity is the system of record, governance becomes enforceable — not advisory.
+What this enables
+Enforced Joiner–Mover–Leaver
+Central approval policies
+Immutable audit trails
+Clear separation of duties
+Critical Infrastructure & IKT
+dmfIAM supports IKT expectations by:
+Acting as a single identity authority
+Governing privileged and service accounts
+Providing traceable authentication and authorization
+Integrating with infrastructure and physical access systems
+GERMAN / FRENCH KEY POSITIONING (UPDATED)
+German (DE)
+Headline
+👉 Zentraler Identity Provider für Schweizer Organisationen
+Subheadline
+👉 dmfIAM bündelt Authentifizierung, Autorisierung und Identity Lifecycle Management — mit integrierter Governance und Auditierbarkeit.
+Key line
+👉 dmfIAM ist die zentrale Identitätsinstanz Ihres Unternehmens.
+French (FR)
+Headline
+👉 Fournisseur d’identité central pour les organisations suisses
+Subheadline
+👉 dmfIAM centralise l’authentification, l’autorisation et le cycle de vie des identités — avec gouvernance et audit intégrés.
+Key line
+👉 dmfIAM est l’autorité centrale des identités de votre organisation.
