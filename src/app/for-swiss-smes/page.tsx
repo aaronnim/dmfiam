@@ -91,7 +91,7 @@ export default function SwissSmesPage() {
             </Section>
 
             {/* Comparison */}
-            <Section style={{ backgroundColor: "rgba(241, 245, 249, 0.5)" }}>
+            <Section className="bg-muted-base" style={{ padding: "8rem 0" }}>
                 <Container>
                     <div
                         style={{

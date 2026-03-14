@@ -37,7 +37,7 @@ export const Footer = () => {
                         <ul className={styles.linkList}>
                             <li className={styles.contactItem}>
                                 <Mail size={16} />
-                                <a href="mailto:contact@dmfiam.ch" className={styles.link}>contact@dmfiam.ch</a>
+                                <a href="mailto:contact@dmfiam.ch" className={styles.link}>iam@digitalmediafactory.ch</a>
                             </li>
                             <li>
                                 <Link href="/contact" className={styles.ctaLink}>

@@ -98,7 +98,7 @@
 
 .archCenter {
     padding: 1.5rem;
-    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    background: linear-gradient(135deg, var(--brand-navy), var(--brand-navy-dark));
     color: white;
     border-radius: 0.75rem;
     text-align: center;
@@ -134,11 +134,15 @@
     font-weight: 700;
     font-size: 1.125rem;
     margin-bottom: 0.25rem;
+    position: relative;
+    z-index: 1;
 }
 
 .archCenterSub {
     font-size: 0.8125rem;
     opacity: 0.85;
+    position: relative;
+    z-index: 1;
 }
 
 .archArrow {

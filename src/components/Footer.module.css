@@ -1,5 +1,5 @@
 .footer {
-    background-color: var(--navy);
+    background-color: var(--brand-navy);
     color: white;
     padding: 3rem 0 1.5rem;
 }
@@ -21,7 +21,7 @@
 }
 
 .brandDesc {
-    color: #94A3B8;
+    color: var(--muted-foreground);
     font-size: 0.875rem;
     line-height: 1.6;
 }
@@ -30,7 +30,7 @@
     font-size: 0.9375rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #F8FAFC;
+    color: var(--foreground);
 }
 
 .linkList {
@@ -43,7 +43,7 @@
 }
 
 .link {
-    color: #CBD5E1;
+    color: var(--muted-foreground);
     font-size: 0.875rem;
     text-decoration: none;
     transition: color 0.2s ease;
@@ -57,12 +57,12 @@
     display: flex;
     gap: 0.5rem;
     align-items: center;
-    color: #CBD5E1;
+    color: var(--muted-foreground);
     font-size: 0.875rem;
 }
 
 .ctaLink {
-    color: #EF4444;
+    color: var(--brand-accent);
     font-weight: 500;
     font-size: 0.875rem;
     text-decoration: none;
@@ -81,7 +81,7 @@
     gap: 1rem;
     align-items: center;
     text-align: center;
-    color: #64748B;
+    color: var(--muted-foreground);
     font-size: 0.8125rem;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .legalLink {
-    color: #64748B;
+    color: var(--muted-foreground);
     text-decoration: none;
     transition: color 0.2s ease;
 }

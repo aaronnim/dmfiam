@@ -60,7 +60,7 @@
     width: 0.375rem;
     height: 0.375rem;
     border-radius: 9999px;
-    background-color: var(--red);
+    background-color: var(--brand-accent);
     margin-top: 0.625rem;
     flex-shrink: 0;
 }
@@ -152,12 +152,16 @@
     position: relative;
     text-align: center;
     padding: 2rem 1.5rem;
-    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    background: linear-gradient(135deg, var(--brand-navy), var(--brand-navy-dark));
     color: white;
     border-radius: 1rem;
-    border: 1px solid rgba(224, 242, 254, 0.2);
-    box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.3);
+    border: 1px solid rgba(var(--brand-blue-rgb), 0.2);
+    box-shadow: 0 20px 40px -10px rgba(var(--brand-navy-rgb), 0.3);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Glassmorphism shimmer */
@@ -168,7 +172,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(224, 242, 254, 0.08) 0%, transparent 60%);
+    background: radial-gradient(circle, rgba(var(--brand-blue-rgb), 0.08) 0%, transparent 60%);
     animation: shimmer 8s ease-in-out infinite;
     pointer-events: none;
 }
@@ -192,17 +196,23 @@
     display: inline-flex;
     margin-bottom: 0.75rem;
     backdrop-filter: blur(4px);
+    position: relative;
+    z-index: 1;
 }
 
 .solutionCenterTitle {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
+    position: relative;
+    z-index: 1;
 }
 
 .solutionCenterSub {
     font-size: 0.8125rem;
     opacity: 0.9;
+    position: relative;
+    z-index: 1;
 }
 
 .solutionLabel {
@@ -281,7 +291,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--accent), #F97316, var(--accent));
+    background: linear-gradient(90deg, var(--brand-blue), var(--brand-blue-light), var(--brand-blue));
     background-size: 200% 100%;
     animation: gradientSlide 4s ease infinite;
 }
@@ -301,7 +311,7 @@
 }
 
 [data-theme='dark'] .smeCard {
-    background-color: rgba(15, 23, 42, 0.8);
+    background-color: rgba(var(--brand-navy-rgb), 0.8);
 }
 
 .smeContent {
@@ -450,7 +460,7 @@
 .trustItem:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 16px -3px rgba(0, 0, 0, 0.1);
-    border-color: var(--navy);
+    border-color: var(--brand-navy);
 }
 
 .trustItemLabel {
@@ -532,7 +542,7 @@
     z-index: 0;
     width: 200px;
     height: 200px;
-    background: var(--baby-blue);
+    background: var(--brand-blue-light);
     bottom: -50px;
     left: -50px;
     animation: orbFloat 10s ease-in-out infinite reverse;
@@ -584,7 +594,7 @@
 .videoOverlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.05), transparent 60%);
+    background: linear-gradient(135deg, rgba(var(--brand-navy-rgb), 0.05), transparent 60%);
     pointer-events: none;
 }
 
@@ -655,7 +665,7 @@
 /* Small-medium screens */
 @media (min-width: 480px) {
     .smeCard {
-        padding: 2rem;
+        padding: 2rem 3rem 2rem 2rem;
     }
 
     .finalCtaTitle {
@@ -688,7 +698,7 @@
     }
 
     .smeCard {
-        padding: 3rem;
+        padding: 3rem 4.5rem 3rem 3rem;
     }
 
     .smeContent {

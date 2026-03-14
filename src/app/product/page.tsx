@@ -21,7 +21,7 @@ export default function ProductPage() {
                 subtitle="dmfIAM is not an add-on or overlay. It is the identity authority that applications, directories, and services rely on."
             />
 
-            <Section>
+            <Section className="bg-muted-base" style={{ padding: "6rem 0" }}>
                 <Container>
                     <div ref={capRef} className={`${styles.contentGrid} scroll-reveal`}>
                         {/* Left: Core Capabilities */}

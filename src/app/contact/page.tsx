@@ -96,7 +96,7 @@ export default function ContactPage() {
                                             href="mailto:contact@dmfiam.ch"
                                             className={styles.infoLink}
                                         >
-                                            contact@dmfiam.ch
+                                            IAM@digitalmediafactory.ch
                                         </a>
                                     </li>
                                     <li className={styles.infoItem}>

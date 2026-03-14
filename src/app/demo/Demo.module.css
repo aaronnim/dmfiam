@@ -9,7 +9,7 @@
 
 .videoFrame {
     aspect-ratio: 16 / 9;
-    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    background: linear-gradient(135deg, var(--brand-navy), var(--brand-navy-dark));
     border-radius: 1rem;
     border: 1px solid var(--border);
     display: flex;

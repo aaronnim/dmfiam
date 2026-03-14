@@ -19,7 +19,7 @@ export const AudienceSection = () => {
     ];
 
     return (
-        <Section style={{ backgroundColor: "rgba(241, 245, 249, 0.5)" }}>
+        <Section className="bg-muted-base" style={{ padding: "8rem 0" }}>
             <Container>
                 <div className={styles.sectionTitle} style={{ marginBottom: "2.5rem" }}>
                     <h2>Designed for Regulated and Critical Environments</h2>

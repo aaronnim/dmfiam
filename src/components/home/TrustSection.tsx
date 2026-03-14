@@ -12,7 +12,7 @@ export const TrustSection = () => {
     const ref = useScrollReveal<HTMLDivElement>();
 
     return (
-        <Section style={{ backgroundColor: "rgba(241, 245, 249, 0.5)", padding: "6rem 0" }}>
+        <Section className="bg-muted-base" style={{ padding: "8rem 0" }}>
             <Container>
                 <div className={styles.sectionTitle} style={{ marginBottom: "3rem" }}>
                     <h2>Trusted Identity Provider for Swiss Organizations</h2>

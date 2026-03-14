@@ -1,7 +1,7 @@
 /* Orbit color variables */
 :root {
-    --orbit-blue: #3B82F6;
-    --orbit-indigo: #6366F1;
+    --orbit-blue: var(--brand-blue-light);
+    --orbit-indigo: var(--brand-blue);
     --orbit-green: #10B981;
 }
 
@@ -194,7 +194,7 @@
     padding: 0.375rem;
     border-radius: 0.375rem;
     margin-bottom: 0.25rem;
-    background-color: rgba(239, 68, 68, 0.1);
+    background-color: rgba(var(--brand-accent-rgb), 0.1);
 }
 
 .centerLabel {
@@ -232,7 +232,7 @@
 }
 
 [data-theme='dark'] .orbitNode {
-    background-color: rgba(15, 17, 32, 0.8);
+    background-color: rgba(var(--brand-navy-rgb), 0.8);
 }
 
 @keyframes bounce {

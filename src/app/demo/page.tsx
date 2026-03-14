@@ -37,18 +37,17 @@ export default function DemoPage() {
             <Section>
                 <Container>
                     <div ref={videoRef} className={`${styles.videoHero} scroll-reveal`}>
-                        <div className={styles.videoFrame}>
-                            <div className={styles.playCircle}>
-                                <Play
-                                    size={32}
-                                    color="white"
-                                    fill="white"
-                                    style={{ marginLeft: "4px" }}
-                                />
-                            </div>
-                            <span className={styles.videoFrameLabel}>
-                                2-Minute Product Overview
-                            </span>
+                        <div className={styles.videoFrame} style={{ padding: 0, border: 'none', position: 'relative', overflow: 'hidden' }}>
+                            <iframe
+                                src="https://dmfch.sharepoint.com/sites/IAM/_layouts/15/embed.aspx?UniqueId=b9d344cc-a63a-4c4c-827a-02ee27a8107d&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+                                width="100%"
+                                height="100%"
+                                frameBorder="0"
+                                scrolling="no"
+                                allowFullScreen
+                                title="Who Has Access (Baseline Control).mp4"
+                                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                            ></iframe>
                         </div>
                         <p className={styles.videoCaption}>
                             This demo walks through the core capabilities of dmfIAM — from
@@ -59,7 +58,7 @@ export default function DemoPage() {
             </Section>
 
             {/* What You'll See - Highlights */}
-            <Section style={{ backgroundColor: "rgba(241, 245, 249, 0.5)" }}>
+            <Section className="bg-muted-base" style={{ padding: "8rem 0" }}>
                 <Container>
                     <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
                         <h2

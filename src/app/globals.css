@@ -1,34 +1,40 @@
 /* CSS Reset & Variables */
 
 :root {
-  /* Colors */
-  --baby-blue: #E0F2FE;
-  --baby-blue-dark: #BAE6FD;
-  --navy: #0F172A;
-  --navy-light: #1E293B;
-  --red: #EF4444;
-  --red-hover: #DC2626;
+  /* Brand Colors from Logo */
+  --brand-blue-light: #6AB3FF;
+  --brand-blue: #0E75CD;
+  --brand-blue-dark: #075094;
+
+  --brand-navy: #2A303A;
+  --brand-navy-dark: #1E2229;
+
+  --brand-accent: #F43C56;
+  /* The red dot in the 'a' */
+
+  /* RGB variants for opacity usage */
+  --brand-blue-rgb: 14, 117, 205;
+  --brand-navy-rgb: 42, 48, 58;
+  --brand-accent-rgb: 244, 60, 86;
 
   /* Semantic Colors - Light Mode Defaults */
-  --background: #F5F8FA;
-  /* Very light blue/neutral tint */
-  --foreground: #0F172A;
-  /* Navy */
+  --background: #F8FAFC;
+  --foreground: var(--brand-navy);
 
-  --primary: #0F172A;
+  --primary: var(--brand-blue);
   --primary-foreground: #FFFFFF;
 
   --secondary: #E0F2FE;
-  --secondary-foreground: #0F172A;
+  --secondary-foreground: var(--brand-navy);
 
-  --accent: #EF4444;
+  --accent: var(--brand-accent);
   --accent-foreground: #FFFFFF;
 
   --muted: #F1F5F9;
   --muted-foreground: #64748B;
 
   --card: #FFFFFF;
-  --card-foreground: #0F172A;
+  --card-foreground: var(--brand-navy);
 
   --border: #E2E8F0;
   --input: #E2E8F0;
@@ -41,24 +47,21 @@
 
 [data-theme='dark'] {
   /* Semantic Colors - Dark Mode */
-  --background: #0B1120;
-  /* Deep Navy, not black */
+  --background: var(--brand-navy-dark);
   --foreground: #F8FAFC;
 
-  --primary: #E0F2FE;
-  /* Baby blue for primary actions in dark mode? Or keep Navy? Navy on Navy is bad. Maybe Red for CTAs. */
-  --primary-foreground: #0F172A;
+  --primary: var(--brand-blue-light);
+  --primary-foreground: var(--brand-navy-dark);
 
-  --secondary: #1E293B;
+  --secondary: var(--brand-navy);
   --secondary-foreground: #F8FAFC;
 
-  /* Accent stays red */
+  --accent: var(--brand-accent);
 
-  --muted: #1E293B;
+  --muted: var(--brand-navy);
   --muted-foreground: #94A3B8;
 
-  --card: #151F32;
-  /* Slightly lighter than background */
+  --card: #202630;
   --card-foreground: #F8FAFC;
 
   --border: #334155;
@@ -110,10 +113,16 @@ p {
   }
 }
 
+.bg-muted-base {
+  background-color: var(--muted);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
 .grainy-gradient {
   position: relative;
-  background: radial-gradient(circle at 15% 50%, rgba(224, 242, 254, 0.4), transparent 25%),
-    radial-gradient(circle at 85% 30%, rgba(239, 68, 68, 0.1), transparent 25%);
+  background: radial-gradient(circle at 15% 50%, rgba(224, 242, 254, 0.4), var(--muted) 25%),
+    radial-gradient(circle at 85% 30%, rgba(239, 68, 68, 0.1), var(--muted) 25%);
   z-index: 0;
 }
 
@@ -132,8 +141,8 @@ p {
 }
 
 [data-theme='dark'] .grainy-gradient {
-  background: radial-gradient(circle at 15% 50%, rgba(30, 41, 59, 0.8), transparent 40%),
-    radial-gradient(circle at 85% 30%, rgba(239, 68, 68, 0.15), transparent 40%);
+  background: radial-gradient(circle at 15% 50%, rgba(30, 41, 59, 0.8), var(--muted) 40%),
+    radial-gradient(circle at 85% 30%, rgba(239, 68, 68, 0.15), var(--muted) 40%);
 }
 
 .btn {

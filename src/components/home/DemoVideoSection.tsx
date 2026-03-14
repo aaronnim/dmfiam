@@ -12,28 +12,21 @@ export const DemoVideoSection = () => {
     const ref = useScrollReveal<HTMLDivElement>();
 
     return (
-        <Section
-            style={{
-                backgroundColor: "rgba(241, 245, 249, 0.5)",
-                borderBottom: "1px solid var(--border)",
-            }}
-        >
+        <Section className="bg-muted-base" style={{ padding: "8rem 0" }}>
             <Container>
                 <div ref={ref} className={`${styles.videoContainer} scroll-reveal`}>
                     <div className={styles.videoWrapper}>
-                        <div className={styles.videoPlaceholder}>
-                            <div className={styles.videoOverlay} />
-                            <div className={styles.videoPlayBtn}>
-                                <Play
-                                    size={32}
-                                    color="var(--accent)"
-                                    style={{ marginLeft: "4px" }}
-                                    fill="currentColor"
-                                />
-                            </div>
-                            <p className={styles.videoPlayLabel}>
-                                Watch the 2-minute overview
-                            </p>
+                        <div className={styles.videoPlaceholder} style={{ padding: 0, border: 'none' }}>
+                            <iframe
+                                src="https://dmfch.sharepoint.com/sites/IAM/_layouts/15/embed.aspx?UniqueId=b9d344cc-a63a-4c4c-827a-02ee27a8107d&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+                                width="100%"
+                                height="100%"
+                                frameBorder="0"
+                                scrolling="no"
+                                allowFullScreen
+                                title="Who Has Access (Baseline Control).mp4"
+                                style={{ borderRadius: '0.75rem' }}
+                            ></iframe>
                         </div>
                     </div>
 

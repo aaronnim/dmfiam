@@ -18,7 +18,7 @@ export const SolutionSection = () => {
     const ref = useScrollReveal<HTMLDivElement>();
 
     return (
-        <Section style={{ backgroundColor: "rgba(241, 245, 249, 0.5)" }}>
+        <Section className="bg-muted-base" style={{ padding: "8rem 0" }}>
             <Container>
                 <div className={styles.sectionTitle} style={{ marginBottom: "4rem" }}>
                     <h2>dmfIAM: One Identity Provider. Full Control.</h2>
